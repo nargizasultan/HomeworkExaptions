@@ -3,13 +3,9 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) throws Exception {
-	Car car =new Car();
-        try(car) {
-            
-        }
-        try {
+        try (Car car =new Car()) {
             car.drive();
-        }catch (Exception ex){
+        } catch (Exception ex){
             ex.printStackTrace();
         }
     }
